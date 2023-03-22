@@ -42,12 +42,39 @@ public class Ex03_Operator {
 		// 5. 산율연산3
 		//num = 10 / 0;  // 현재는 예외발생 후 종료, 추후 예외처리로 처리 가능
 		
+		// 6. 증감연산
+		int a = 10,  b = 10; 
+		u.p("6-1. a = " + a + " b = " + b);
+		a++; // a = a+ 1, a += 	1과 동일 
+		++b;
+		u.p("6-2. a = " + a + " b = " + b);
 		
+		int x = a++; // a를 할당하고 ++
+		int y = ++b; // b를 ++ 후 할당
+		u.p("6-2. x = " + x + " y = " + y);
 		
+		// int x = a; a++; 이 더 좋은 방식
 		
+		// 7. 비교연산
+		a = 10; b = 5;
+		u.p("7-1. a == b : " + (a==b));
+		int c = 7; 
+		//boolean result = a > b > c; (a > b) && (b > c)
 		
-	}
+		// 8. 논리연산
+		u.p("" + (true && false));
+		u.p("8-2 : " + (true || false));
+		u.p("8-3 : " + (true ^ true));
+		
+		// 9. 삼항연산
+		int score = 29;
+		String baddad = (score>90)? "당연" : "%$^*&&&&7";
+		u.p("9-1 baddad : " + baddad);
+		
+		String host = (score>30)? "맥주" : "한국으로 돌아가";
+		u.p("9-2 host : " + host);
 
+	}
 }
 
 
