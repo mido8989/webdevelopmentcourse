@@ -22,7 +22,15 @@ public class Ex05_Random {
 		
 		// Random Alphabet
 		// 임의의 영문 대문자 한글자가 나오도록 해보시오.
-		char random_char = new 
+		// A : 0x41, 65
+		char random_char = (char)(rd.nextInt(26) + 65);
+		u.p("Radnom Alphabet 1 : " + random_char);
+		
+		// 대소문자 중 Random Alphabet
+		// hint) A : 65(0x41), a : 97
+		random_char = (char)(rd.nextInt(26) + 65 + rd.nextInt(2) * 32);
+		u.p("Random Aplphabet 2 : " + random_char);
+		
 		
 
 	}
