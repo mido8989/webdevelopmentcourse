@@ -73,6 +73,19 @@ public class Ex03_Operator {
 		
 		String host = (score>30)? "맥주" : "한국으로 돌아가";
 		u.p("9-2 host : " + host);
+		
+		// 10. 비트연산 
+		int b1 = 1; 
+		int b2 = 2; 
+		u.p("10. b1 & b2 = " + (b1 & b2));
+		
+		int b3 = -1;
+		u.p("10-2. b3(hex) : " + Integer.toHexString(b3));
+		u.p("10-2. b3(hex) : " + Integer.toBinaryString(b3));
+		
+		int b4 = 100;
+		int b5 = b4 * 4;
+		int b6 = b4 << 2; //2진수로 표현했을 때 2 칸 왼쪽으로 shift
 
 	}
 }
