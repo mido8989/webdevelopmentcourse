@@ -1,5 +1,7 @@
 package day08;
 
+import java.util.Random;
+
 import util.MyUtil;
 
 public class Ex10_Color {
@@ -50,8 +52,54 @@ public class Ex10_Color {
 		u.p("");
 		
 		u.tp("True Color");
+		for(int i=0;i<256;i++) {
+			System.out.print("\033[48;2;" + i + ";0;0" + "m" + " " + u.END);
+		}
+		u.p("");
+		//Green, Blue를 똑같이 표현하시요.
+		for(int i=0;i<256;i++) {
+			System.out.print("\033[48;2;0;" + i + ";0" + "m" + "  " + u.END);
+		}
+		u.p("");
 		
-
+		for(int i=0;i<256;i++) {
+			System.out.print("\033[48;2;0;0;" + i  + "m" + " " + u.END);
+		}
+		u.p("");
+		for(int i=0;i<256;i++) {
+			System.out.print("\033[48;2;" + i + ";" + i + ";" + i +  "m" + u.END);
+		}
+		u.p("");
+		// r, g, b 각각을 256 랜덤으로 뽑아서 색을 만드시오.
+		// 총 256픽셀을 출력하되, 64픽셀마다 한 줄씩 내리시오.
+		Random rd = new Random();
+		int r, g, b;
+		for(int i=0;i<256;i++) {
+			 r = rd.nextInt(256);
+			 g = rd.nextInt(256);
+			 b = rd.nextInt(256);
+			 // g = r; b = r; // for grayscale
+			 System.out.print("\033[48;2;" + r + ";" + g + ";" + b + "m" + " " + u.END);
+			 if(i % 64 == 63)
+				 u.p("");
+		}
+		
+		// all color infinity loop
+		/*
+		int count = 0;
+		for(r=200;r<256;r++) {
+			for(g=200;g<256;g++) {
+				for(b=200;b<256;b++) {
+					 System.out.print("\033[48;2;" + r + ";" + g + ";" + b + "m" + " " + u.END);
+					 if(count % 64 == 63)
+						 u.p("");
+					 count++;
+				}
+			}
+		}
+		*/
+		
+		
 	  }
 	}
 	

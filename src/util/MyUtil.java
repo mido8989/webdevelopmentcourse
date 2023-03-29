@@ -45,6 +45,7 @@ public class MyUtil {
 			case 6: style = 9; break;
 			case 7 : style = 21; break;
 		}
+		
 		String str = "\033[38;5;" + color + "m"
 				+ "\033[" + style + "m"
 				+ title + END;
