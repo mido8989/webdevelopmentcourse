@@ -43,8 +43,16 @@ public class Ex10_Color {
 		for(int i=0;i<256;i++) {
 			System.out.print("\033[38;5;" + i + "m" + "A" + u.END);
 		}
+		u.p("");
+		for(int i=0;i<256;i++) {
+			System.out.print("\033[48;5;" + i + "m" + "A" + u.END);
+		}
+		u.p("");
+		
+		u.tp("True Color");
+		
 
-	}
+	  }
 	}
 	
 

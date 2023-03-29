@@ -1,5 +1,7 @@
 package util;
 
+import java.util.Random;
+
 public class MyUtil {
 	/* Color */
 	public final String BLACK      = "\033[90m";
@@ -28,5 +30,34 @@ public class MyUtil {
 	public void p(String str) {
 		System.out.println(str);
 	}
-
+	
+	/*
+	 * tp(title) : 256색 중 임의의 색으로 str을 출력한다.
+	 * @param title
+	 */
+	public void tp(String title) {
+		Random rd = new Random();
+		int color = rd.nextInt(256);
+		int style = rd.nextInt(7) + 1;
+		switch(style) {
+			case 1, 2, 3, 4: break;
+			case 5: style = 7; break;
+			case 6: style = 9; break;
+			case 7 : style = 21; break;
+		}
+		String str = "\033[38;5;" + color + "m"
+				+ "\033[" + style + "m"
+				+ title + END;
+		System.out.println("***************************");
+		System.out.println(str);
+		System.out.println("***************************");
+	}
 }
+
+
+
+
+
+
+
+
