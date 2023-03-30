@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class MyUtil {
 	/* Color */
-	public final String BLACK      = "\033[90m";
-	public final String RED        = "\033[91m";
+	public static final String BLACK      = "\033[90m";
+	public static final String RED        = "\033[91m";
 	public final String GREEN      = "\033[92m";
 	public final String YELLOW     = "\033[93m";
 	public final String BLUE       = "\033[94m";
@@ -25,9 +25,9 @@ public class MyUtil {
 	public final String CROSSEDOUT       ="\033[9m";
 	public final String DOUBLEUNDERLINE  ="\033[21m";
 
-	public final String END = "\033[0m";
+	public static final String END = "\033[0m";
 	
-	public void p(String str) {
+	public static void p(String str) {
 		System.out.println(str);
 	}
 	
