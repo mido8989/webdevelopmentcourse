@@ -15,7 +15,6 @@ public class Ex11_ClassPerson {
 	}
 	
 	// Constructor
-	
 	Ex11_ClassPerson(){
 		System.out.println("[Person] Created~~");
 	}
@@ -34,5 +33,4 @@ public class Ex11_ClassPerson {
 		age = ag;
 		System.out.println("[Person] " + name + "(" + age + ") Created~~");
 	}
-	
 }
